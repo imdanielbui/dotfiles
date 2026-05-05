@@ -16,21 +16,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  rocks = {
+    enabled = false,
+  },
   -- Core & UI
   {
     "folke/lazy.nvim",
     event = "VeryLazy",
-    opts = {
-      rocks = {
-        enabled = false,
-        hererocks = false,
-      },
-      performance = {
-        rtp = {
-          reset = false,
-        },
-      },
-    },
   },
   {
     "nvim-lualine/lualine.nvim",
