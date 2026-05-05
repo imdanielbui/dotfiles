@@ -20,6 +20,11 @@ require("lazy").setup({
   {
     "folke/lazy.nvim",
     event = "VeryLazy",
+    opts = {
+      rocks = {
+        hererocks = false,
+      },
+    },
   },
   {
     "nvim-lualine/lualine.nvim",

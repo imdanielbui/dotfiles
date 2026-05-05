@@ -2,7 +2,7 @@
 local wk = require("which-key")
 
 wk.setup({
-  window = {
+  win = {
     border = "single",
     padding = { 1, 2, 1, 2 },
     position = "bottom",
