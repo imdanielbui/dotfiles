@@ -57,13 +57,14 @@ require("lazy").setup({
     "nvim-tree/nvim-web-devicons",
     lazy = true,
   },
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("config.which-key")
-    end,
-  },
+  -- which-key - disabled due to mapping issue
+  -- {
+  --   "folke/which-key.nvim",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("config.which-key")
+  --   end,
+  -- },
 
   -- LSP & Completion
   {
