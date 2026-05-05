@@ -62,6 +62,6 @@ gitsigns.setup({
     map("n", "ghtd", gs.toggle_deleted, "Toggle deleted")
 
     -- Text object
-    map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "Git hunk"),
-  end,
+    map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "Git hunk")
+  end
 })

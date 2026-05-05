@@ -19,7 +19,7 @@ require("autocmds")
 -- Plugin configuration (Lazy.nvim)
 require("plugins")
 
--- LSP configuration (includes Dart)
+-- LSP configuration
 require("lsp")
 
 -- UI settings (colorscheme, statusline)

@@ -53,6 +53,7 @@ require("lazy").setup({
   -- LSP & Completion
   {
     "neovim/nvim-lspconfig",
+    version = "v1.5.0",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "hrsh7th/cmp-nvim-lsp" },
   },
