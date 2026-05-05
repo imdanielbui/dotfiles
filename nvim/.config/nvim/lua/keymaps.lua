@@ -49,9 +49,9 @@ keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" 
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Find help tags" })
 keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Recent files" })
 
--- Fzf-lua (alternative fast search)
+-- Fzf-lua (alternative fast search - dùng khi cần speed)
 keymap("n", "<leader>fa", "<cmd>FzfLua files<cr>", { desc = "Fzf files" })
-keymap("n", "<leader>fg", "<cmd>FzfLua live_grep_native<cr>", { desc = "Fzf grep" })
+keymap("n", "<leader>fz", "<cmd>FzfLua live_grep_native<cr>", { desc = "Fzf grep" })
 
 -- Git (fugitive)
 keymap("n", "<leader>gs", "<cmd>Git<cr>", { desc = "Git status" })
