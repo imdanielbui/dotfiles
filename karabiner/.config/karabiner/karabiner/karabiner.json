@@ -1,0 +1,158 @@
+{
+    "profiles": [
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Spacebar to Left Shift + HJKL to move mouse",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "description": "Spacebar to Shift (Space if alone)",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_shift" }],
+                                "to_if_alone": [{ "key_code": "spacebar" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "H to Mouse Left",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["left_shift"] }
+                                },
+                                "to": [{ "mouse_key": { "x": -1500 } }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "J to Mouse Down",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["left_shift"] }
+                                },
+                                "to": [{ "mouse_key": { "y": 1500 } }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "K to Mouse Up",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_shift"] }
+                                },
+                                "to": [{ "mouse_key": { "y": -1500 } }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "L to Mouse Right",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["left_shift"] }
+                                },
+                                "to": [{ "mouse_key": { "x": 1500 } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
+                                "description": "Change caps_lock to command+control+option+shift.",
+                                "from": {
+                                    "key_code": "f19",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": ["left_command", "left_control", "left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "JIS Non-Convert as Hyper key + Vim navigation",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [{ "key_code": "left_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [{ "key_code": "down_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [{ "key_code": "up_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [{ "key_code": "right_arrow" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change spacebar to left_shift. (Post spacebar if pressed alone)",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_shift" }],
+                                "to_if_alone": [{ "key_code": "spacebar" }],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 834,
+                        "vendor_id": 1452
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "japanese_kana" },
+                            "to": [{ "key_code": "f20" }]
+                        },
+                        {
+                            "from": { "key_code": "japanese_eisuu" },
+                            "to": [{ "key_code": "f19" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": { "is_consumer": true },
+                    "ignore": false
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "jis" }
+        }
+    ]
+}

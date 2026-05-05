@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+*.exe
+
+# Config backups
+*.json.backup
+automatic_backups/
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Build artifacts
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Caches
+.cache/
+.parcel-cache/
+raycast/.config/raycast/raycast/config.json
