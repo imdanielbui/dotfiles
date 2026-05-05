@@ -22,7 +22,7 @@ require("lazy").setup({
     event = "VeryLazy",
     opts = {
       rocks = {
-        hererocks = false,
+        enabled = false,
       },
     },
   },
