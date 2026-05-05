@@ -1,0 +1,2 @@
+-- Lazy.nvim configuration
+-- Already set in plugins.lua, this can be empty or used for additional settings

@@ -1,3 +1,26 @@
+-- Neovim Configuration Entry Point
+-- Modular structure based on nvim-config (jdhao)
+
+-- Enable Lua module loader
+vim.loader.enable()
+
+-- Global settings
+require("globals")
+
+-- Neovim options
 require("options")
+
+-- Key mappings
 require("keymaps")
-require("lazy")
+
+-- Autocommands
+require("autocmds")
+
+-- Plugin configuration (Lazy.nvim)
+require("plugins")
+
+-- LSP configuration (includes Dart)
+require("lsp")
+
+-- UI settings (colorscheme, statusline)
+require("ui")
