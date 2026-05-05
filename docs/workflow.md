@@ -28,7 +28,7 @@
 ```
 
 **Trong Tmux:**
-- Bấm `Ctrl+s` (prefix default) rồi bấm `I` (capital i) để cài TPM plugins
+- Bấm `Ctrl+a` (prefix default) rồi bấm `I` (capital i) để cài TPM plugins
 - Cần có: `vim-tmux-navigator` (đã config trong `.tmux.conf`)
 
 ### 1.3 Kiểm tra LSP hoạt động
@@ -79,8 +79,8 @@ Ctrl+Shift+c    " Trong kitty
 Ctrl+Shift+v    " Trong kitty
 
 # Trong tmux (sử dụng tmux buffer)
-Ctrl+s + y      " Copy vào tmux buffer
-Ctrl+s + p      " Paste từ tmux buffer
+Ctrl+a + y      " Copy vào tmux buffer
+Ctrl+a + p      " Paste từ tmux buffer
 ```
 
 ### 2.4 Tìm kiếm và URL
@@ -110,7 +110,7 @@ Session (1 phiên làm việc)
 
 ### 3.2 Prefix
 
-**Prefix mặc định:** `Ctrl+s` (đã config trong tmux.conf)
+**Prefix:** `Ctrl+a` (đã config trong tmux.conf, thay thế mặc định Ctrl+b)
 
 Mọi lệnh tmux đều bắt đầu bằng prefix.
 
@@ -121,8 +121,8 @@ Mọi lệnh tmux đều bắt đầu bằng prefix.
 | Tạo session mới | `tmux new -s <tên>` | Tạo session với tên |
 | Liệt kê session | `tmux ls` | Xem tất cả session |
 | Attach vào session | `tmux a -t <tên>` | Vào lại session cũ |
-| Đổi tên session | `Ctrl+s + $` | Đổi tên session hiện tại |
-| Detach khỏi session | `Ctrl+s + d` | Thoát tmux nhưng giữ session |
+| Đổi tên session | `Ctrl+a + $` | Đổi tên session hiện tại |
+| Detach khỏi session | `Ctrl+a + d` | Thoát tmux nhưng giữ session |
 | Kill session | `tmux kill-session -t <tên>` | Xóa session |
 
 **Ví dụ:**
@@ -136,50 +136,50 @@ tmux a -t dev         # Attach vào session tên "dev"
 
 | Action | Shortcut | Description |
 |--------|----------|-------------|
-| Tạo window mới | `Ctrl+s + c` | Tạo tab mới |
-| Đổi tên window | `Ctrl+s + ,` | Đặt tên cho tab hiện tại |
-| Liệt kê windows | `Ctrl+s + w` | Xem tất cả tabs |
-| Chuyển window | `Ctrl+s + <0-9>` | Qua tab số 0-9 |
-| Window trước | `Ctrl+s + p` | Tab trước |
-| Window sau | `Ctrl+s + n` | Tab kế tiếp |
-| Tìm window | `Ctrl+s + f` | Tìm tab theo tên |
-| Đóng window | `Ctrl+s + &` | Xóa tab hiện tại |
+| Tạo window mới | `Ctrl+a + c` | Tạo tab mới |
+| Đổi tên window | `Ctrl+a + ,` | Đặt tên cho tab hiện tại |
+| Liệt kê windows | `Ctrl+a + w` | Xem tất cả tabs |
+| Chuyển window | `Ctrl+a + <0-9>` | Qua tab số 0-9 |
+| Window trước | `Ctrl+a + p` | Tab trước |
+| Window sau | `Ctrl+a + n` | Tab kế tiếp |
+| Tìm window | `Ctrl+a + f` | Tìm tab theo tên |
+| Đóng window | `Ctrl+a + &` | Xóa tab hiện tại |
 
 ### 3.5 Pane Management (Split)
 
 | Action | Shortcut | Description |
 |--------|----------|-------------|
-| Split dọc | `Ctrl+s + "` | Chia màn hình theo chiều dọc |
-| Split ngang | `Ctrl+s + %` | Chia màn hình theo chiều ngang |
-| Đóng pane | `Ctrl+s + x` | Đóng split hiện tại |
-| Di chuyển pane | `Ctrl+s + o` | Qua pane tiếp theo |
-| Di chuyển pane (vim style) | `Ctrl+s + h/j/k/l` | Qua pane theo hướng |
-| Resize pane | `Ctrl+s + Alt+h/j/k/l` | Thay đổi kích thước |
-| Zoom pane | `Ctrl+s + z` | Phóng to pane hiện tại |
-| Tile all panes | `Ctrl+s + E` | Sắp xếp lại tất cả |
-| Swap pane | `Ctrl+s + {` | Đổi vị trí pane trước |
-| Swap pane | `Ctrl+s + }` | Đổi vị trí pane sau |
+| Split dọc | `Ctrl+a + "` | Chia màn hình theo chiều dọc |
+| Split ngang | `Ctrl+a + %` | Chia màn hình theo chiều ngang |
+| Đóng pane | `Ctrl+a + x` | Đóng split hiện tại |
+| Di chuyển pane | `Ctrl+a + o` | Qua pane tiếp theo |
+| Di chuyển pane (vim style) | `Ctrl+a + h/j/k/l` | Qua pane theo hướng |
+| Resize pane | `Ctrl+a + Alt+h/j/k/l` | Thay đổi kích thước |
+| Zoom pane | `Ctrl+a + z` | Phóng to pane hiện tại |
+| Tile all panes | `Ctrl+a + E` | Sắp xếp lại tất cả |
+| Swap pane | `Ctrl+a + {` | Đổi vị trí pane trước |
+| Swap pane | `Ctrl+a + }` | Đổi vị trí pane sau |
 
 ### 3.6 Copy Mode (Scrollback)
 
 | Action | Shortcut | Description |
 |--------|----------|-------------|
-| Vào copy mode | `Ctrl+s + [` | Bắt đầu scroll |
+| Vào copy mode | `Ctrl+a + [` | Bắt đầu scroll |
 | Di chuyển | `h/j/k/l` hoặc arrows | Như vim |
 | Tìm kiếm | `/` hoặc `?` | Tìm text |
 | Bắt đầu selection | `v` | Bắt đầu chọn text |
 | Selection to line | `V` | Chọn cả dòng |
 | Copy selection | `y` | Copy vào tmux buffer |
-| Paste | `Ctrl+s + ]` | Paste từ buffer |
+| Paste | `Ctrl+a + ]` | Paste từ buffer |
 | Thoát | `q` | Thoát copy mode |
 
 ### 3.7 Các lệnh hữu ích khác
 
 | Action | Shortcut | Description |
 |--------|----------|-------------|
-| Xem keybindings | `Ctrl+s + ?` | Liệt kế tất cả shortcuts |
-| Clock mode | `Ctrl+s + t` | Hiển thị đồng hồ |
-| Command prompt | `Ctrl+s + :` | Nhập lệnh tmux |
+| Xem keybindings | `Ctrl+a + ?` | Liệt kế tất cả shortcuts |
+| Clock mode | `Ctrl+a + t` | Hiển thị đồng hồ |
+| Command prompt | `Ctrl+a + :` | Nhập lệnh tmux |
 
 ---
 
@@ -531,14 +531,14 @@ tmux a -t dev         # Attach vào session tên "dev"
 **Kiểm tra đã cài chưa:**
 ```bash
 # Trong tmux
-Ctrl+s I     # Cài đặt TPM plugins
+Ctrl+a I     # Cài đặt TPM plugins
 ```
 
 ### 5.5 Lưu ý quan trọng
 
 - Khi di chuyển sang tmux pane, bạn vẫn ở trong tmux (không phải nvim)
 - Khi di chuyển sang nvim split, bạn tự động vào nvim (vim-tmux-navigator sẽ focus vào nvim)
-- **Không cần bấm prefix (`Ctrl+s`) khi dùng navigation này!**
+- **Không cần bấm prefix (`Ctrl+a`) khi dùng navigation này!**
 
 ---
 
@@ -696,7 +696,7 @@ nvim src/index.ts
 tmux
 
 # 3. (Lần đầu) Cài tmux plugins
-Ctrl+s I
+Ctrl+a I
 
 # 4. Mở nvim
 nvim
@@ -716,11 +716,11 @@ nvim
 | Nvim | `Ctrl+n` | Toggle file tree |
 | Nvim | `gd` | Go to definition |
 | Nvim | `K` | Hover docs |
-| Tmux | `Ctrl+s c` | Tạo window mới |
-| Tmux | `Ctrl+s "` | Split ngang |
-| Tmux | `Ctrl+s %` | Split dọc |
-| Tmux | `Ctrl+s d` | Detach |
-| Tmux | `Ctrl+s [` | Scroll mode |
+| Tmux | `Ctrl+a c` | Tạo window mới |
+| Tmux | `Ctrl+a "` | Split ngang |
+| Tmux | `Ctrl+a %` | Split dọc |
+| Tmux | `Ctrl+a d` | Detach |
+| Tmux | `Ctrl+a [` | Scroll mode |
 
 ### 8.3 Troubleshooting
 
@@ -731,7 +731,7 @@ nvim
 
 **Tmux plugins không cài:**
 ```
-Ctrl+s I
+Ctrl+a I
 ```
 
 **LSP không hoạt động:**
@@ -761,7 +761,7 @@ Workflow cơ bản:
 
 1. **Mở Kitty** → `Ctrl+Shift+Enter`
 2. **Khởi tmux** → `tmux` (hoặc `tmux attach`)
-3. **Tạo workspace** → `Ctrl+s c` (new window)
+3. **Tạo workspace** → `Ctrl+a c` (new window)
 4. **Mở nvim** → `nvim`
 5. **Di chuyển** → `Ctrl+h/j/k/l` (giữa nvim splits và tmux panes)
 6. **Tìm file** → `Ctrl+p`
