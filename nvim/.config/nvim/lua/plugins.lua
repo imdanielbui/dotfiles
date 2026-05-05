@@ -23,6 +23,12 @@ require("lazy").setup({
     opts = {
       rocks = {
         enabled = false,
+        hererocks = false,
+      },
+      performance = {
+        rtp = {
+          reset = false,
+        },
       },
     },
   },
