@@ -150,9 +150,4 @@ if vim.fn.executable("rust-analyzer") == 1 then
   })
 end
 
--- Show line diagnostics in virtual text
-vim.api.nvim_create_autocmd("LspDiagnosticsChanged", {
-  callback = function()
-    vim.diagnostic.setloclist({ open = false })
-  end,
-})
+-- Line 154: Removed invalid autocmd (not essential for LSP)
