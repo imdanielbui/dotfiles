@@ -33,6 +33,8 @@ fzf_lua.setup({
     git_icons = true,
     no_ignore = false,
     show_hide = false,
+    -- Use rg instead of find for macOS
+    fd_opts = "--hidden --type f --exclude .git",
   },
   grep = {
     previewer = "bat",
