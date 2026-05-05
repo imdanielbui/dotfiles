@@ -53,6 +53,7 @@ require("lazy").setup({
   },
   {
     "folke/which-key.nvim",
+    version = "v3.8.0",
     event = "VeryLazy",
     config = function()
       require("config.which-key")
