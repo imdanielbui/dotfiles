@@ -8,11 +8,13 @@ vim.g.is_win = vim.fn.has("win32") == 1
 
 -- Neovim version check
 local expected_version = "0.11.0"
-local actual_version = vim.version().minor
-local actual_major = vim.version().major
+local version = vim.version()
 
-if actual_major < 1 or (actual_major == 1 and actual_version < 11) then
-  vim.notify("Neovim " .. expected_version .. "+ is recommended. Current: " .. vim.version().major .. "." .. actual_version, vim.log.levels.WARN)
+if version.major == 0 and version.minor < 11 then
+  vim.notify(
+    "Neovim " .. expected_version .. "+ is recommended. Current: " .. version.major .. "." .. version.minor,
+    vim.log.levels.WARN
+  )
 end
 
 -- Path separator

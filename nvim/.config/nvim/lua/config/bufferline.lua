@@ -7,13 +7,19 @@ bufferline.setup({
     right_mouse_command = "bdelete! %d",
     diagnostics = "nvim_lsp",
     diagnostics_indicator = function(_, _, diag)
-      local icons = require("ui.icons").diagnostics
-      return (diag.error and icons.Error .. diag.error .. " " or "") .. (diag.warning and icons.Warn .. diag.warning or "")
+      local parts = {}
+      if diag.error and diag.error > 0 then
+        table.insert(parts, " " .. diag.error)
+      end
+      if diag.warning and diag.warning > 0 then
+        table.insert(parts, " " .. diag.warning)
+      end
+      return table.concat(parts, " ")
     end,
     offsets = {
       {
-        filetype = "neo-tree",
-        text = "Neo-tree",
+        filetype = "NvimTree",
+        text = "Explorer",
         highlight = "Directory",
         text_align = "left",
       },

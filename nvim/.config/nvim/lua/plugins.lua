@@ -40,7 +40,16 @@ require("lazy").setup({
   },
   {
     "nvim-tree/nvim-tree.lua",
-    keys = { "<space>s" },
+    keys = {
+      {
+        "<space>s",
+        function()
+          require("nvim-tree.api").tree.toggle({ focus = true })
+        end,
+        desc = "Toggle file tree",
+      },
+    },
+    cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeFocus", "NvimTreeFindFile" },
     config = function()
       require("config.nvim-tree")
     end,
@@ -49,14 +58,21 @@ require("lazy").setup({
     "nvim-tree/nvim-web-devicons",
     lazy = true,
   },
-  -- which-key - disabled due to mapping issue
-  -- {
-  --   "folke/which-key.nvim",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("config.which-key")
-  --   end,
-  -- },
+  {
+    "goolord/alpha-nvim",
+    event = "VimEnter",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("config.alpha")
+    end,
+  },
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("config.which-key")
+    end,
+  },
 
   -- LSP & Completion
   {

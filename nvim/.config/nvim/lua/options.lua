@@ -26,6 +26,15 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false
 vim.opt.foldlevel = 99
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitkeep = "screen"
+vim.opt.scrolloff = 6
+vim.opt.sidescrolloff = 6
+vim.opt.confirm = true
+vim.opt.autoread = true
+vim.opt.inccommand = "split"
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 -- Editing
 vim.opt.tabstop = 4
@@ -42,6 +51,11 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+
+if vim.fn.executable("rg") == 1 then
+  vim.opt.grepprg = "rg --vimgrep --smart-case --hidden"
+  vim.opt.grepformat = "%f:%l:%c:%m"
+end
 
 -- Performance
 vim.opt.updatetime = 250

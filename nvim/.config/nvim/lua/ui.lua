@@ -1,8 +1,9 @@
 -- UI Settings
 -- Colorscheme and general UI configuration
 
--- Set colorscheme
-require("catppuccin").setup({
+-- Setup catppuccin
+local catppuccin = require("catppuccin")
+catppuccin.setup({
   flavour = "mocha",
   transparent_background = false,
   show_end_of_buffer = false,
@@ -23,7 +24,7 @@ require("catppuccin").setup({
   },
 })
 
--- Load colorscheme
+-- Load colorscheme using the correct method for catppuccin
 vim.cmd.colorscheme("catppuccin")
 
 -- Set transparent background for some terminals

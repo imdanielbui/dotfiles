@@ -10,10 +10,11 @@ require("cmp_cmdline")
 cmp.setup({
   snippet = {
     expand = function(args)
-      vim.fn["UltiSnips#Anon"](args.body)
+      vim.snippet.expand(args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
+    ["<C-Space>"] = cmp.mapping.complete(),
     ["<Tab>"] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -42,6 +43,9 @@ cmp.setup({
   completion = {
     keyword_length = 1,
     completeopt = "menu,noselect",
+  },
+  experimental = {
+    ghost_text = true,
   },
   window = {
     completion = cmp.config.window.bordered(),

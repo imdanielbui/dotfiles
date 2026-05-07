@@ -29,7 +29,7 @@ dotfiles/
 ├── github-copilot/.config/github-copilot/  # GitHub Copilot config
 ├── git/.gitconfig                  # Git global config
 ├── install.sh                      # Automated install script
-└── AI-AGENT-WORKFLOW-GUIDE.md      # Vietnamese workflow guide
+└── docs/workflow.md                # Vietnamese workflow guide
 ```
 
 ## 🚀 Quick Start
@@ -56,8 +56,8 @@ tm
 
 # Or manually:
 tmux new-session -s myproject
-# Ctrl+s | to split vertically
-# Ctrl+s - to split horizontally
+# Ctrl+a | to split vertically
+# Ctrl+a - to split horizontally
 ```
 
 **Suggested 3-pane layout:**
@@ -85,14 +85,14 @@ gl   # git log --oneline --graph
 
 ## 📝 Key Bindings
 
-### Tmux (Prefix: Ctrl+s)
+### Tmux (Prefix: Ctrl+a)
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+s` r | Reload config |
-| `Ctrl+s` h/j/k/l | Navigate panes |
-| `Ctrl+s` \| | Split vertically |
-| `Ctrl+s` - | Split horizontally |
-| `Ctrl+s` d | Detach session |
+| `Ctrl+a` r | Reload config |
+| `Ctrl+h/j/k/l` | Navigate tmux and nvim panes |
+| `Ctrl+a` `\|` | Split vertically |
+| `Ctrl+a` `-` | Split horizontally |
+| `Ctrl+a` d | Detach session |
 
 ### Kitty
 | Shortcut | Action |
@@ -105,14 +105,14 @@ gl   # git log --oneline --graph
 ## 🔧 Post-Install Steps
 
 1. **Restart terminal** or run `source ~/.zshrc`
-2. **Install tmux plugins**: Inside tmux, press `Ctrl+s` then `I` (capital i)
+2. **Install tmux plugins**: Inside tmux, press `Ctrl+a` then `I` (capital i)
 3. **Sync Neovim plugins**: Run `nvim` then `:Lazy sync`
 4. **Train zoxide**: Navigate to directories, then use `z` to jump
 
 ## 📖 Documentation
 
 For detailed Vietnamese guide with AI Agent workflows, see:
-- [AI-AGENT-WORKFLOW-GUIDE.md](./AI-AGENT-WORKFLOW-GUIDE.md)
+- [docs/workflow.md](./docs/workflow.md)
 
 ## 🎨 Themes
 

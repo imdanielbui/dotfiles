@@ -23,6 +23,7 @@ keymap("n", "<leader>Q", "<cmd>qa!<cr>", { silent = true, desc = "Quit all" })
 
 -- Clear search highlight
 keymap("n", "<leader>h", ":nohlsearch<CR>", { desc = "Clear search highlight" })
+keymap("n", "<leader><space>", [[:%s/\s\+$//e<CR>]], { desc = "Strip trailing spaces" })
 
 -- Move lines up/down
 keymap("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
@@ -49,6 +50,10 @@ keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" 
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Find help tags" })
 keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Recent files" })
 
+-- Buffer navigation
+keymap("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
+keymap("n", "[b", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
+
 -- Fzf-lua (alternative fast search - dùng khi cần speed)
 keymap("n", "<leader>fa", "<cmd>FzfLua files<cr>", { desc = "Fzf files" })
 keymap("n", "<leader>fz", "<cmd>FzfLua live_grep_native<cr>", { desc = "Fzf grep" })
@@ -69,16 +74,20 @@ keymap("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
 keymap("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
 keymap("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
 keymap("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename" })
+keymap("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+keymap("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+keymap("n", "<leader>e", vim.diagnostic.open_float, { desc = "Line diagnostics" })
+keymap("n", "<leader>xx", vim.diagnostic.setloclist, { desc = "Diagnostics list" })
 
 -- Hop (cursor jump)
 keymap("n", "f", "<cmd>HopChar1<cr>", { desc = "Jump to char" })
 keymap("n", "F", "<cmd>HopChar2<cr>", { desc = "Jump to 2 chars" })
-
--- Nvim-tree
-keymap("n", "<space>s", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file tree" })
 
 -- Copy entire buffer
 keymap("n", "<leader>y", "<cmd>%yank<cr>", { desc = "Yank entire buffer" })
 
 -- Change directory to current file
 keymap("n", "<leader>cd", "<cmd>lcd %:p:h<cr><cmd>pwd<cr>", { desc = "Change cwd" })
+
+-- Terminal mode
+keymap("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })

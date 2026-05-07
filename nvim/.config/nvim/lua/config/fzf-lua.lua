@@ -58,4 +58,4 @@ fzf_lua.setup({
 
 -- Keybindings for fzf-lua
 vim.keymap.set("n", "<leader>fa", "<cmd>FzfLua files<cr>", { desc = "Fzf find all files" })
-vim.keymap.set("n", "<leader>fg", "<cmd>FzfLua live_grep<cr>", { desc = "Fzf live grep" })
+vim.keymap.set("n", "<leader>fz", "<cmd>FzfLua live_grep<cr>", { desc = "Fzf live grep" })

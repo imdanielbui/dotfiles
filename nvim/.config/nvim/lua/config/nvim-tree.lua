@@ -35,6 +35,7 @@ nvimtree.setup({
   },
   renderer = {
     indent_width = 2,
+    symlink_destination = true,
     indent_markers = {
       enable = true,
       icons = {
@@ -45,13 +46,10 @@ nvimtree.setup({
       },
     },
     icons = {
-      webdev_colors = true,
-      git_status = true,
       show = {
         file = true,
         folder = true,
         folder_arrow = true,
-        link = true,
       },
       glyphs = {
         default = "󰈚",
@@ -83,10 +81,9 @@ nvimtree.setup({
   },
   git = {
     enable = true,
-    show_on_dirs = {},
-    show_on_open_dirs = {},
+    show_on_dirs = true,
+    show_on_open_dirs = true,
     disable_for_dirs = {},
-    max_priority = 80,
     timeout = 4000,
   },
   actions = {
@@ -116,5 +113,8 @@ nvimtree.setup({
     no_buffer = false,
     custom = { "node_modules", ".git" },
     exclude = {},
+  },
+  filesystem_watchers = {
+    enable = false,
   },
 })
